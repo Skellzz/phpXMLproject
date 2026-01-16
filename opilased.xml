@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<opilased>
+    <opilane>
+        <nimi>Juku</nimi>
+        <isikukood>1256987</isikukood>
+        <eriala>Tarkvara arendaja</eriala>
+        <elukoht>
+            <linn>Tallinn</linn>
+            <maakond>Harjumaa</maakond>
+        </elukoht>
+    </opilane>
+    <opilane>
+        <nimi>Henry</nimi>
+        <isikukood>6612462</isikukood>
+        <eriala>Noorem Tarkvaraarendaja</eriala>
+        <elukoht>
+            <linn>Tartu</linn>
+            <maakond>Tartumaa</maakond>
+        </elukoht>
+    </opilane>
+    <opilane>
+        <nimi>Genri</nimi>
+        <isikukood>4614287</isikukood>
+        <eriala>Mehatroonik</eriala>
+        <elukoht>
+            <linn>Tallinn</linn>
+            <maakond>Harjumaa</maakond>
+        </elukoht>
+    </opilane>
+    <opilane>
+        <nimi>Uku</nimi>
+        <isikukood>7847128</isikukood>
+        <eriala>Mehatroonik</eriala>
+        <elukoht>
+            <linn>Kiili</linn>
+            <maakond>Harjumaa</maakond>
+        </elukoht>
+    </opilane>
+    <opilane>
+        <nimi>Villiam</nimi>
+        <isikukood>848214</isikukood>
+        <eriala> Mehaanik</eriala>
+        <elukoht>
+            <linn>Tallinn</linn>
+            <maakond>Harjumaa</maakond>
+        </elukoht>
+    </opilane>
+</opilased>
