@@ -14,6 +14,10 @@ function Lisaopilane(){
         $xml_root->appendChild($xml_opilane);
         $xml_elukoht = $xmlDoc->createElement("elukoht");
         $xml_opilane->appendChild($xml_elukoht);
+        $xml_Ained = $xmlDoc->createElement("ained");
+        $xml_opilane->appendChild($xml_Ained);
+        $xml_Hinded = $xmlDoc->createElement("hinded");
+        $xml_opilane->appendChild($xml_Hinded);
         unset($_POST['submit']);
         foreach($_POST as $voti=>$vaartus)
         {
@@ -23,6 +27,16 @@ function Lisaopilane(){
                $xml_elukoht->appendChild($kirje);
             else
                $xml_opilane->appendChild($kirje);
+
+            if ($voti == 'aine1' || $voti == 'aine2')
+                $xml_elukoht->appendChild($kirje);
+            else
+                $xml_opilane->appendChild($kirje);
+
+            if ($voti == 'hinne1' || $voti == 'hinne2')
+                $xml_elukoht->appendChild($kirje);
+            else
+                $xml_opilane->appendChild($kirje);
         }
         $xmlDoc->save('opilased.xml');
         header("Refesh:0");
@@ -80,6 +94,9 @@ if(!empty($_POST['otsing'])){
         <th>Isikukood</th>
         <th>Eriala</th>
         <th>Elukoht</th>
+        <th>Ained</th>
+        <th>Hinnded</th>
+        <th>Pilt</th>
     </tr>";
     foreach ($tulemus as $opilane) {
         echo "<tr>";
@@ -88,6 +105,11 @@ if(!empty($_POST['otsing'])){
         echo "<td>" . $opilane->eriala . "</td>";
         echo "<td>" . $opilane->elukoht->linn . ", " .
             $opilane->elukoht->maakond . "</td>";
+        echo "<td>" . $opilane->ained->aine1 . ",".
+            $opilane->ained->aine2 . "</td>";
+        echo "<td>" . $opilane->hinded->hinne1 . ",".
+             $opilane->hinded->hinne2 . "</td>";
+        echo "<td><img src='".$opilane->pilt."' width='100px'></td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -99,6 +121,9 @@ if(!empty($_POST['otsing'])){
         <th>Isikukood</th>
         <th>Eriala</th>
         <th>Elukoht</th>
+        <th>Ained</th>
+        <th>Hinnded</th>
+        <th>Pilt</th>
     </tr>
     <?php
     foreach($opilased->opilane as $opilane){
@@ -108,6 +133,11 @@ if(!empty($_POST['otsing'])){
         echo "<td>".$opilane->eriala."</td>";
         echo "<td>".$opilane->elukoht->linn.", ".
             $opilane->elukoht->maakond."</td>";
+        echo "<td>" . $opilane->ained->aine1 . ",".
+            $opilane->ained->aine2 . "</td>";
+        echo "<td>" . $opilane->hinded->hinne1 . ",".
+            $opilane->hinded->hinne2 . "</td>";
+        echo "<td><img src='".$opilane->pilt."' width='100px'></td>";
         echo "</tr>";
     }
     }
@@ -138,9 +168,27 @@ if(!empty($_POST['otsing'])){
                 <td><input type="text" name="maakond" id="maakond"></td>
             </tr>
             <tr>
+                <td><label for="aine1">Aine1:</label></td>
+                <td><input type="text" name="aine1" id="aine1"></td>
+            </tr>
+            <tr>
+                <td><label for="aine2">Aine2:</label></td>
+                <td><input type="text" name="aine2" id="aine2"></td>
+            </tr>
+            <tr>
+                <td><label for="hinne1">Hinne1:</label></td>
+                <td><input type="text" name="hinne1" id="hinne1"></td>
+            </tr>
+            <tr>
+                <td><label for="hinne2">Hinne2:</label></td>
+                <td><input type="text" name="hinne2" id="hinne2"></td>
+            </tr>
+            <tr>
                 <td><label for="pilt">Pilt:</label></td>
                 <td><input type="text" name="pilt" id="pilt"></td>
             </tr>
+
+
             <tr>
                 <td><input type="submit" name="submit" id="submit" value="Sisesta"></td>
                 <td></td>
@@ -164,6 +212,10 @@ if(!empty($_POST['otsing'])){
 
         $xml_elukoht = $xmlDoc->createElement("elukoht");
 
+        $xml_Ained = $xmlDoc->createElement("ained");
+
+        $xml_Hinded = $xmlDoc->createElement("hinded");
+
         unset($_POST['submit']);
         foreach($_POST as $voti=>$vaartus)
         if ($voti == 'linn' || $voti == 'maakond'){
@@ -174,6 +226,28 @@ if(!empty($_POST['otsing'])){
             $kirje = $xmlDoc->CreateElement($voti,$vaartus);
             $xml_opilane->appendChild($kirje);
         }
+
+        unset($_POST['submit']);
+        foreach($_POST as $voti=>$vaartus)
+            if ($voti == 'aine1' || $voti == 'aine2'){
+                $xml_Ained->appendChild($xmlDoc->createElement($voti,$vaartus));
+                $xml_opilane->appendChild($xml_Ained);
+            }
+            else {
+                $kirje = $xmlDoc->CreateElement($voti,$vaartus);
+                $xml_opilane->appendChild($kirje);
+            }
+
+        unset($_POST['submit']);
+        foreach($_POST as $voti=>$vaartus)
+            if ($voti == 'hinne1' || $voti == 'hinne2'){
+                $xml_Hinded->appendChild($xmlDoc->createElement($voti,$vaartus));
+                $xml_opilane->appendChild($xml_Hinded);
+            }
+            else {
+                $kirje = $xmlDoc->CreateElement($voti,$vaartus);
+                $xml_opilane->appendChild($kirje);
+            }
         $xmlDoc->save('opilased.xml');
         header("Refesh:0");
     }
