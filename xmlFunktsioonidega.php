@@ -4,6 +4,8 @@ require ('funktsioonid.php');
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="CSS.css">
+    <script src="vapp.js"></script>
     <title>XML faili kuvamine funktsioonide abil</title>
 </head>
 <body>

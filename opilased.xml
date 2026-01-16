@@ -1,48 +1,75 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <opilased>
-    <opilane>
-        <nimi>Juku</nimi>
-        <isikukood>1256987</isikukood>
-        <eriala>Tarkvara arendaja</eriala>
-        <elukoht>
-            <linn>Tallinn</linn>
-            <maakond>Harjumaa</maakond>
-        </elukoht>
-    </opilane>
-    <opilane>
-        <nimi>Henry</nimi>
-        <isikukood>6612462</isikukood>
-        <eriala>Noorem Tarkvaraarendaja</eriala>
-        <elukoht>
-            <linn>Tartu</linn>
-            <maakond>Tartumaa</maakond>
-        </elukoht>
-    </opilane>
-    <opilane>
-        <nimi>Genri</nimi>
-        <isikukood>4614287</isikukood>
-        <eriala>Mehatroonik</eriala>
-        <elukoht>
-            <linn>Tallinn</linn>
-            <maakond>Harjumaa</maakond>
-        </elukoht>
-    </opilane>
-    <opilane>
-        <nimi>Uku</nimi>
-        <isikukood>7847128</isikukood>
-        <eriala>Mehatroonik</eriala>
-        <elukoht>
-            <linn>Kiili</linn>
-            <maakond>Harjumaa</maakond>
-        </elukoht>
-    </opilane>
-    <opilane>
-        <nimi>Villiam</nimi>
-        <isikukood>848214</isikukood>
-        <eriala> Mehaanik</eriala>
-        <elukoht>
-            <linn>Tallinn</linn>
-            <maakond>Harjumaa</maakond>
-        </elukoht>
-    </opilane>
+  <opilane>
+    <nimi>Juku</nimi>
+    <isikukood>1256987</isikukood>
+    <eriala>Tarkvara arendaja</eriala>
+    <elukoht>
+      <linn>Tallinn</linn>
+      <maakond>Harjumaa</maakond>
+    </elukoht>
+  </opilane>
+  <opilane>
+    <nimi>Henry</nimi>
+    <isikukood>6612462</isikukood>
+    <eriala>Noorem Tarkvaraarendaja</eriala>
+    <elukoht>
+      <linn>Tartu</linn>
+      <maakond>Tartumaa</maakond>
+    </elukoht>
+  </opilane>
+  <opilane>
+    <nimi>Genri</nimi>
+    <isikukood>4614287</isikukood>
+    <eriala>Mehatroonik</eriala>
+    <elukoht>
+      <linn>Tallinn</linn>
+      <maakond>Harjumaa</maakond>
+    </elukoht>
+  </opilane>
+  <opilane>
+    <nimi>Uku</nimi>
+    <isikukood>7847128</isikukood>
+    <eriala>Mehatroonik</eriala>
+    <elukoht>
+      <linn>Kiili</linn>
+      <maakond>Harjumaa</maakond>
+    </elukoht>
+  </opilane>
+  <opilane>
+    <nimi>Villiam</nimi>
+    <isikukood>848214</isikukood>
+    <eriala> Mehaanik</eriala>
+    <elukoht>
+      <linn>Tallinn</linn>
+      <maakond>Harjumaa</maakond>
+    </elukoht>
+  </opilane>
+  <opilane>
+    <nimi>Sigma</nimi>
+    <isikukood>25163123</isikukood>
+    <eriala>KliendiTeenindaja</eriala>
+    <elukoht>Tallinn, Harjumaa</elukoht>
+  </opilane>
+  <opilane>
+    <nimi>Geore</nimi>
+    <isikukood>1245152</isikukood>
+    <eriala>Tarkvara Arendaja</eriala>
+    <elukoht>Tallinn, Harjumaa</elukoht>
+  </opilane>
+  <opilane>
+    <nimi>George</nimi>
+    <isikukood>1513957127</isikukood>
+    <eriala>tarkvara Arendaja</eriala>
+    <elukoht>Tallinn, Harjumaa</elukoht>
+  </opilane>
+  <opilane>
+    <nimi>uhaohigafhboia</nimi>
+    <isikukood>214114123</isikukood>
+    <eriala>Taojrpnjb</eriala>
+    <elukoht>
+      <linn>gaaf</linn>
+      <maakond>aff</maakond>
+    </elukoht>
+  </opilane>
 </opilased>
