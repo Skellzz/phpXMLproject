@@ -17,7 +17,6 @@ function Lisaopilane()
     $xml_Ained = $xmlDoc->createElement("ained");
     $xml_opilane->appendChild($xml_Ained);
     $xml_aine = $xmlDoc->createElement("aine");
-    $xml_aine2 = $xmlDoc->createElement("aine2");
     $xml_Hinded = $xmlDoc->createElement("hinded");
     $xml_opilane->appendChild($xml_Hinded);
     $xml_hinne = $xmlDoc->createElement("hinne");
@@ -43,14 +42,14 @@ function Lisaopilane()
         }
         else if($voti == 'aine2')
         {
-            $xml_aine2->appendChild($xmlDoc->createElement("nimetus", $vaartus));
-            $xml_Ained->appendChild($xml_aine2);
+            $xml_aine->appendChild($xmlDoc->createElement("nimetus", $vaartus));
+            $xml_Ained->appendChild($xml_aine);
             $xml_opilane->appendChild($xml_Ained);
         }
         else if($voti == 'hinne2')
         {
-            $xml_aine2->appendChild($xmlDoc->createElement("hinne", $vaartus));
-            $xml_Ained->appendChild($xml_aine2);
+            $xml_aine->appendChild($xmlDoc->createElement("hinne", $vaartus));
+            $xml_Ained->appendChild($xml_aine);
             $xml_opilane->appendChild($xml_Ained);
         }
         else {
@@ -132,10 +131,12 @@ if(!empty($_POST['otsing'])){
         echo "<td>" . $opilane->eriala . "</td>";
         echo "<td>" . $opilane->elukoht->linn . ", " .
             $opilane->elukoht->maakond . "</td>";
-        echo "<td>" . $opilane->ained->aine->nimetus . ",".
-            $opilane->ained->aine->hinne . "</td>";
-        echo "<td>" . $opilane->ained->aine->nimetus . ",".
-            $opilane->ained->aine->hinne . "</td>";
+
+        foreach($opilane->ained as $ained){
+            echo "<td>" . $ained->aine->nimetus .":". $ained->aine->hinne. "</td>";
+        }
+
+
         echo "<td><img src='".$opilane->pilt."' width='100px'></td>";
         echo "</tr>";
     }
@@ -160,10 +161,11 @@ if(!empty($_POST['otsing'])){
         echo "<td>".$opilane->eriala."</td>";
         echo "<td>".$opilane->elukoht->linn.", ".
             $opilane->elukoht->maakond."</td>";
-        echo "<td>" . $opilane->ained->nimetus . ",".
-            $opilane->ained->hinne . "</td>";
-        echo "<td>" . $opilane->hinded->nimetus . ",".
-            $opilane->hinded->hinne . "</td>";
+
+        foreach($opilane->ained as $ained){
+            echo "<td>" . $ained->aine->nimetus .":". $ained->aine->hinne. "</td>";
+        }
+
         echo "<td><img src='".$opilane->pilt."' width='100px'></td>";
         echo "</tr>";
     }
